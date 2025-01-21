@@ -1,0 +1,3 @@
+/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles/StudentManager.exe.dir
+/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles/edit_cache.dir
+/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles/rebuild_cache.dir
