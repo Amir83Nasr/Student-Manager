@@ -225,6 +225,30 @@ src/Student.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManager.exe.dir/build.make CMakeFiles/StudentManager.exe.dir/src/Student.cpp.s
 .PHONY : src/Student.cpp.s
 
+src/Teacher.o: src/Teacher.cpp.o
+.PHONY : src/Teacher.o
+
+# target to build an object file
+src/Teacher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManager.exe.dir/build.make CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o
+.PHONY : src/Teacher.cpp.o
+
+src/Teacher.i: src/Teacher.cpp.i
+.PHONY : src/Teacher.i
+
+# target to preprocess a source file
+src/Teacher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManager.exe.dir/build.make CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.i
+.PHONY : src/Teacher.cpp.i
+
+src/Teacher.s: src/Teacher.cpp.s
+.PHONY : src/Teacher.s
+
+# target to generate assembly for a file
+src/Teacher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManager.exe.dir/build.make CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.s
+.PHONY : src/Teacher.cpp.s
+
 src/Utils.o: src/Utils.cpp.o
 .PHONY : src/Utils.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/Student.o"
 	@echo "... src/Student.i"
 	@echo "... src/Student.s"
+	@echo "... src/Teacher.o"
+	@echo "... src/Teacher.i"
+	@echo "... src/Teacher.s"
 	@echo "... src/Utils.o"
 	@echo "... src/Utils.i"
 	@echo "... src/Utils.s"

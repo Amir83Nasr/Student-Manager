@@ -58,7 +58,7 @@ void Manager::studentMenu(Student &student)
 
 // ——————————–––––––––––---------------------
 
-void Manager::teacherMenu()
+void Manager::teacherMenu(Teacher &teacher)
 {
   // loadStudentsFromFile();
   while (true)
@@ -122,8 +122,9 @@ void Manager::adminMenu()
     // منوی انتخاب گزینه‌ها
     cout
         << "\n╔══════════════════════════════════════════════════════════ Options ══╗\n";
-    cout << "║ 1️⃣  Show Students List                                               ║\n";
-    cout << "║ 2️⃣  Export to Excel                                                  ║\n";
+    cout << "║ 1️⃣  Manage Students                                                  ║\n";
+    cout << "║ 2️⃣  Manage Teachers                                                  ║\n";
+    cout << "║ 3️⃣  Export to Excel                                                  ║\n";
     cout << "║ 0️⃣  Logout                                                           ║\n";
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
 
@@ -139,6 +140,10 @@ void Manager::adminMenu()
       listStudents();
       break;
     case 2:
+      clearConsole();
+      manageTeachers();
+      break;
+    case 3:
       exportToExcel("../data/students.csv");
       waitForKeyPress();
       break;
@@ -196,7 +201,7 @@ void Manager::accessMenu()
       break;
     case 2:
       clearConsole();
-      teacherMenu();
+      teacherLogin();
       break;
     case 3:
       studentLogin();

@@ -353,5 +353,6 @@ CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o: \
  /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Course.h \
  /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Teacher.h \
  /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Student.h \
+ /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Teacher.h \
  /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Course.h \
  /Users/AmirHossein/Documents/Programming/Student\ Manager/src/../include/Utils.h

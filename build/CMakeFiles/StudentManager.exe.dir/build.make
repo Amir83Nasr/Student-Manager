@@ -111,10 +111,24 @@ CMakeFiles/StudentManager.exe.dir/src/Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentManager.exe.dir/src/Student.cpp.s"
 	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/AmirHossein/Documents/Programming/Student Manager/src/Student.cpp" -o CMakeFiles/StudentManager.exe.dir/src/Student.cpp.s
 
+CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: CMakeFiles/StudentManager.exe.dir/flags.make
+CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: /Users/AmirHossein/Documents/Programming/Student\ Manager/src/Teacher.cpp
+CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: CMakeFiles/StudentManager.exe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o -MF CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o.d -o CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o -c "/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp"
+
+CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.i"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp" > CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.i
+
+CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.s"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp" -o CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.s
+
 CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: CMakeFiles/StudentManager.exe.dir/flags.make
 CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: /Users/AmirHossein/Documents/Programming/Student\ Manager/src/Course.cpp
 CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: CMakeFiles/StudentManager.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o -MF CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o.d -o CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o -c "/Users/AmirHossein/Documents/Programming/Student Manager/src/Course.cpp"
 
 CMakeFiles/StudentManager.exe.dir/src/Course.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/StudentManager.exe.dir/src/Course.cpp.s: cmake_force
 CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: CMakeFiles/StudentManager.exe.dir/flags.make
 CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: /Users/AmirHossein/Documents/Programming/Student\ Manager/src/Menu.cpp
 CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: CMakeFiles/StudentManager.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o -MF CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o.d -o CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o -c "/Users/AmirHossein/Documents/Programming/Student Manager/src/Menu.cpp"
 
 CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.s: cmake_force
 CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: CMakeFiles/StudentManager.exe.dir/flags.make
 CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: /Users/AmirHossein/Documents/Programming/Student\ Manager/src/Utils.cpp
 CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: CMakeFiles/StudentManager.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o -MF CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o.d -o CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o -c "/Users/AmirHossein/Documents/Programming/Student Manager/src/Utils.cpp"
 
 CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.i: cmake_force
@@ -158,6 +172,7 @@ StudentManager_exe_OBJECTS = \
 "CMakeFiles/StudentManager.exe.dir/src/main.cpp.o" \
 "CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o" \
 "CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o" \
+"CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o" \
 "CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o" \
 "CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o" \
 "CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o"
@@ -168,12 +183,13 @@ StudentManager_exe_EXTERNAL_OBJECTS =
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/main.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o
+StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/build.make
 StudentManager.exe: CMakeFiles/StudentManager.exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable StudentManager.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/AmirHossein/Documents/Programming/Student Manager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable StudentManager.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StudentManager.exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

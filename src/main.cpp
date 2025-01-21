@@ -6,7 +6,7 @@
 int main()
 {
     clearConsole();
-    Manager manager("../data/teachers.json", "../data/students.json");
+    Manager manager("../data/teachers.json", "../data/students.json", "../data/cources.json");
     manager.run();
     return 0;
 }

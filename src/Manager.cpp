@@ -1,12 +1,12 @@
 #include "../include/Manager.h"
 #include "../include/Student.h"
-// #include "../include/Teacher.h"
+#include "../include/Teacher.h"
 #include "../include/Course.h"
 #include "../include/Utils.h"
 
 // ———————————–––––––––––––––(Manager)------------------------
 
-Manager::Manager(const string &teacherFile, const string &studentFile) : teacherFilename(teacherFile), studentFilename(studentFile) {}
+Manager::Manager(const string &teacherFile, const string &studentFile, const string &courseFile) : teacherFilename(teacherFile), studentFilename(studentFile), courseFilename(courseFile) {}
 
 void Manager::addStudent()
 {
@@ -806,5 +806,260 @@ void Manager::studentLogin()
     {
         cout << "❌ Student Code not found. Please try again.\n";
         waitForKeyPress();
+    }
+}
+
+void Manager::teacherLogin()
+{
+    cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    string id;
+    string password;
+    cout << "\n╔═════════════════════════════════════════════════════════════════════╗";
+    cout << "\n║ Enter your National ID: ";
+    cout << "\n║ Enter your Password: ";
+    cin >> id;
+    cin >> password;
+
+    bool found = false;
+    for (auto &teacher : teachers)
+    {
+        if (teacher.id == id && teacher.password == password)
+        {
+            found = true;
+            clearConsole();
+            cout << "Welcome, " << teacher.firstName + ' ' + teacher.lastName << "!\n";
+            teacherMenu(teacher); // فراخوانی منوی اختصاصی معلم
+            break;
+        }
+    }
+
+    if (!found)
+    {
+        cout << "❌ Student Code not found. Please try again.\n";
+        waitForKeyPress();
+    }
+}
+
+void Manager::manageTeachers()
+{
+    while (true)
+    {
+        clearConsole();
+        cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║                   🧑‍🏫 Teacher Management Menu                     ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+        cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║ 1. Add Teacher                                                      ║\n";
+        cout << "║ 2. Edit Teacher                                                     ║\n";
+        cout << "║ 3. Delete Teacher                                                   ║\n";
+        cout << "║ 4. View All Teachers                                                ║\n";
+        cout << "║ 5. Exit                                                             ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+        cout << "Enter your choice: ";
+        int choice;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            addTeacher();
+            saveTeachersToFileSorted();
+            break;
+        case 2:
+            editTeacher();
+            saveTeachersToFileSorted();
+            break;
+        case 3:
+            deleteTeacher();
+            saveTeachersToFileSorted();
+            break;
+        case 4:
+            listTeachers();
+            break;
+        case 5:
+            return;
+        default:
+            cout << "❌ Invalid choice. Please try again.\n";
+            waitForKeyPress();
+        }
+    }
+}
+
+void Manager::addTeacher()
+{
+    Teacher teacher;
+
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                           📋 Add Teacher                           ║\n";
+    cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    cout << "Enter Teacher ID: ";
+    cin >> teacher.id;
+
+    cin.ignore(); // پاک کردن کاراکتر newline
+    cout << "Enter First Name: ";
+    getline(cin, teacher.firstName);
+
+    cout << "Enter Last Name: ";
+    getline(cin, teacher.lastName);
+
+    // بررسی تکراری نبودن ID
+    for (const auto &t : teachers)
+    {
+        if (t.id == teacher.id)
+        {
+            cout << "❌ A teacher with this ID already exists!\n";
+            waitForKeyPress();
+            return;
+        }
+    }
+
+    teachers.push_back(teacher);
+    cout << "✅ Teacher added successfully!\n";
+    waitForKeyPress();
+}
+
+void Manager::editTeacher()
+{
+    clearConsole();
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                           ✏️ Edit Teacher                           ║\n";
+    cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    cout << "Enter Teacher ID to edit: ";
+    string id;
+    cin >> id;
+
+    // پیدا کردن استاد با ID مشخص‌شده
+    auto it = find_if(teachers.begin(), teachers.end(), [id](const Teacher &t)
+                      { return t.id == id; });
+
+    if (it != teachers.end())
+    {
+        Teacher &t = *it;
+
+        string input;
+        cin.ignore();
+
+        cout << "Enter New First Name (current: " << t.firstName << "): ";
+        getline(cin, input);
+        if (!input.empty())
+            t.firstName = input;
+
+        cout << "Enter New Last Name (current: " << t.lastName << "): ";
+        getline(cin, input);
+        if (!input.empty())
+            t.lastName = input;
+
+        cout << "✅ Teacher updated successfully!\n";
+    }
+    else
+    {
+        cout << "❌ No teacher found with ID " << id << "!\n";
+    }
+
+    waitForKeyPress();
+}
+
+void Manager::deleteTeacher()
+{
+    clearConsole();
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                           🗑️ Delete Teacher                        ║\n";
+    cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    cout << "Enter Teacher ID to delete: ";
+    string id;
+    cin >> id;
+
+    auto it = find_if(teachers.begin(), teachers.end(), [id](const Teacher &t)
+                      { return t.id == id; });
+
+    if (it != teachers.end())
+    {
+        teachers.erase(it);
+        cout << "✅ Teacher deleted successfully!\n";
+    }
+    else
+    {
+        cout << "❌ No teacher found with ID " << id << "!\n";
+    }
+
+    waitForKeyPress();
+}
+
+void Manager::listTeachers()
+{
+    waitForKeyPress();
+
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                          📋 List of Teachers                       ║\n";
+    cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    if (teachers.empty())
+    {
+        cout << "No teachers found!\n";
+    }
+    else
+    {
+        for (const auto &t : teachers)
+        {
+            cout << "ID: " << t.id << ", Name: " << t.firstName << " " << t.lastName
+                 << "\n";
+        }
+    }
+
+    waitForKeyPress();
+}
+
+void Manager::saveTeachersToFileSorted() const
+{
+    // مرتب کردن بر اساس nationalID
+    vector<Teacher> sortedTeachers = teachers;
+    sort(sortedTeachers.begin(), sortedTeachers.end(), [](const Teacher &a, const Teacher &b)
+         { return a.id < b.id; });
+
+    // تبدیل به JSON
+    json jArray;
+    for (const auto &teacher : sortedTeachers)
+    {
+        jArray.push_back(teacher.Teacher::toJSON());
+    }
+
+    // ذخیره در فایل
+    ofstream file(teacherFilename);
+    if (file.is_open())
+    {
+        file << jArray.dump(2); // ذخیره با فرمت زیبا
+        file.close();
+        cout << "║ ✅ Teachers saved successfully to " << teacherFilename << "!\n";
+    }
+    else
+    {
+        cerr << "║ ❌ Unable to open file " << teacherFilename << " for writing!\n";
+    }
+}
+
+// بارگذاری دانش‌آموزان از فایل JSON
+void Manager::loadTeachersFromFile()
+{
+    ifstream inFile(teacherFilename);
+    if (inFile.is_open())
+    {
+        json jArray;
+        inFile >> jArray;
+
+        teachers.clear();
+        for (const auto &j : jArray)
+        {
+            teachers.push_back(Teacher::fromJSON(j));
+        }
+        inFile.close();
+    }
+    else
+    {
+        return;
     }
 }

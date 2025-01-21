@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o.d"
   "CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o"
   "CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o.d"
+  "CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o"
+  "CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o.d"
   "CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o"
   "CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o.d"
   "CMakeFiles/StudentManager.exe.dir/src/main.cpp.o"

@@ -4,54 +4,27 @@
 
 // ———————————–––––––––––––––---(Teacher)----------------------------
 
-void Teacehr::viewStudentsInCourse(const string &courseName, const vector<Student> &students) const
+json Teacher::toJSON() const
 {
-  cout << "\n═════════════════════════════════════════════════════\n";
-  cout << " Students in Course: " << courseName << "\n";
-  cout << "═════════════════════════════════════════════════════\n";
-  cout << left << setw(15) << "Student ID" << setw(25) << "Name" << "\n";
-  cout << "-----------------------------------------------------\n";
-  for (const auto &student : students)
-  {
-    for (const auto &course : student.courses)
-    {
-      if (course.name == courseName)
-      {
-        cout << left << setw(15) << student.id << student.firstName << " " << student.lastName << "\n";
-      }
-    }
-  }
-  cout << "═════════════════════════════════════════════════════\n";
+  return {
+      {"id", id},
+      {"password", password},
+      {"firstName", firstName},
+      {"lastName", lastName},
+      {"courses", courses}};
 }
 
-void Teacehr::modifyStudentGrade(const string &courseName, int studentID, double newGrade, vector<Student> &students) const
-{
-  for (auto &student : students)
-  {
-    if (student.id == studentID)
-    {
-      for (auto &course : student.courses)
-      {
-        if (course.name == courseName)
-        {
-          course.grade = newGrade;
-          cout << "\n✅ Grade updated successfully for student " << studentID << " in course " << courseName << "!\n";
-          return;
-        }
-      }
-    }
-  }
-  cout << "\n❌ Student or course not found!\n";
-}
+// ——————————–––––––––––---------------------
 
-void Teacehr::displayInfo() const
+Teacher Teacher::fromJSON(const json &j)
 {
-  cout << "\n═════════════════════════════════════════════════════\n";
-  cout << " Teacher Information \n";
-  cout << "═════════════════════════════════════════════════════\n";
-  cout << "Name: " << firstName << " " << lastName << "\n";
-  cout << "National ID: " << nationalID << "\n";
-  cout << "═════════════════════════════════════════════════════\n";
+  Teacher t;
+  t.id = j.at("id").get<string>();
+  t.password = j.at("password").get<string>();
+  t.firstName = j.at("firstName").get<string>();
+  t.lastName = j.at("lastName").get<string>();
+  t.courses = j.at("courses").get<vector<string>>();
+  return t;
 }
 
 // ————————————–––––––––––––––----------------------------------------

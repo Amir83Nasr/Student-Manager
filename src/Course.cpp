@@ -2,10 +2,6 @@
 
 // ———————————–––––––––––––––---(Course)----------------------------
 
-Course::Course(const string &code = "", const string &name = "", const string &instructor = "", int weight = 0, double grade = 0.0) : code(code), name(name), instructor(instructor), weight(weight), grade(grade) {}
-
-// ——————————–––––––––––---------------------
-
 json Course::toJSON() const
 {
     return {

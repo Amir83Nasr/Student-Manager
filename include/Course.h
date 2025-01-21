@@ -16,8 +16,6 @@ struct Course
   double grade; // نمره
   int weight;   // وزن درس (معادل تعداد واحد)
 
-  Course(const string &code = "", const string &name = "", const string &instructor = "", int weight = 0, double grade = 0.0);
-
   json toJSON() const;
   static Course fromJSON(const json &j);
 };

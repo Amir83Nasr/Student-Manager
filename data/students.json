@@ -2,106 +2,25 @@
   {
     "courses": [
       {
+        "code": "",
         "grade": 20.0,
+        "instructor": "",
         "name": "AI",
         "weight": 3
       },
       {
-        "grade": 20.0,
+        "code": "",
+        "grade": 12.0,
+        "instructor": "",
         "name": "Amar",
         "weight": 2
       },
       {
-        "grade": 19.0,
+        "code": "",
+        "grade": 20.0,
+        "instructor": "",
         "name": "FCP",
         "weight": 3
-      }
-    ],
-    "entryYear": 1401,
-    "firstName": "Ali",
-    "id": 220701011,
-    "lastName": "Radmard"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Yasin",
-    "id": 220701032,
-    "lastName": "Aghaziarati"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Ali",
-    "id": 220701034,
-    "lastName": "Ashari"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Mohammad Hossein",
-    "id": 220701036,
-    "lastName": "Farhadian"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Ava",
-    "id": 220701072,
-    "lastName": "Shahabeddin"
-  },
-  {
-    "courses": [
-      {
-        "grade": 15.0,
-        "name": "AI",
-        "weight": 3
-      }
-    ],
-    "entryYear": 1401,
-    "firstName": "Navid",
-    "id": 220701074,
-    "lastName": "Bagherian"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Seyyed Emadoddin",
-    "id": 220701100,
-    "lastName": "Momeni"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Mahdi",
-    "id": 220701101,
-    "lastName": "Monajjem"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Erfan",
-    "id": 220701102,
-    "lastName": "Nadali"
-  },
-  {
-    "courses": [],
-    "entryYear": 1401,
-    "firstName": "Fargol",
-    "id": 220701103,
-    "lastName": "Nazem Zadeh"
-  },
-  {
-    "courses": [
-      {
-        "grade": 16.0,
-        "name": "AI",
-        "weight": 3
-      },
-      {
-        "grade": 13.0,
-        "name": "Amar",
-        "weight": 2
       }
     ],
     "entryYear": 1401,
@@ -110,18 +29,7 @@
     "lastName": "Nasrollahi"
   },
   {
-    "courses": [
-      {
-        "grade": 19.0,
-        "name": "AI",
-        "weight": 3
-      },
-      {
-        "grade": 17.0,
-        "name": "Amar",
-        "weight": 2
-      }
-    ],
+    "courses": [],
     "entryYear": 1401,
     "firstName": "Mohammad Mahdi",
     "id": 220701105,

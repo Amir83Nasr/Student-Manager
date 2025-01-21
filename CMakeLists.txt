@@ -12,7 +12,7 @@ set(SOURCES
     src/main.cpp
     src/Manager.cpp
     src/Student.cpp
-    # src/Teacher.cpp
+    src/Teacher.cpp
     src/Course.cpp
     src/Menu.cpp
     src/Utils.cpp
@@ -22,7 +22,7 @@ set(SOURCES
 set(HEADERS
     include/Manager.h
     include/Student.h
-    # include/Teacher.h
+    include/Teacher.h
     include/Course.h
     include/Utils.h
 )

@@ -19,6 +19,12 @@
 },
 {
   "directory": "/Users/AmirHossein/Documents/Programming/Student Manager/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14  -I\"/Users/AmirHossein/Documents/Programming/Student Manager/external/nlohmann_json/include\" -I\"/Users/AmirHossein/Documents/Programming/Student Manager/include\" -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o -c \"/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp\"",
+  "file": "/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp",
+  "output": "CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o"
+},
+{
+  "directory": "/Users/AmirHossein/Documents/Programming/Student Manager/build",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14  -I\"/Users/AmirHossein/Documents/Programming/Student Manager/external/nlohmann_json/include\" -I\"/Users/AmirHossein/Documents/Programming/Student Manager/include\" -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o -c \"/Users/AmirHossein/Documents/Programming/Student Manager/src/Course.cpp\"",
   "file": "/Users/AmirHossein/Documents/Programming/Student Manager/src/Course.cpp",
   "output": "CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o"

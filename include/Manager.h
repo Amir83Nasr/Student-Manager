@@ -22,10 +22,10 @@ private:
     void accessMenu();
     void adminMenu();
     void studentMenu(Student &student);
-    void teacherMenu();
+    void teacherMenu(Teacher &teacher);
 
 public:
-    explicit Manager(const string &teacherFile, const string &studentFile);
+    explicit Manager(const string &teacherFile, const string &studentFile, const string &courseFile);
 
     void listStudents();
     void filterStudents();
@@ -35,17 +35,26 @@ public:
     void editStudent();
     void deleteStudent();
 
+    void manageTeachers();
+    void listTeachers();
+
+    void addTeacher();
+    void editTeacher();
+    void deleteTeacher();
+
     void saveStudentsToFileSorted() const;
     void loadStudentsFromFile();
 
     void saveTeachersToFileSorted() const;
     void loadTeachersFromFile();
 
-    void loadCoursesFromFile();
+    void loadCoursesFromFileSorted() const;
     void saveCoursesToFile();
 
     void exportToExcel(const string &outputFilename) const;
 
+    void adminLogin();
+    void teacherLogin();
     void studentLogin();
 
     void run();

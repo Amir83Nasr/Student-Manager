@@ -9,15 +9,12 @@
 struct Teacher
 {
 
-    string nationalID;
+    string id;
     string password;
     string firstName;
     string lastName;
 
     vector<string> courses;
-
-    Teacher(const string &id, const string &pwd, const string &first, const string &last)
-        : nationalID(id), password(pwd), firstName(first), lastName(last) {}
 
     bool authenticate(const string &id, const string &pwd) const;
 
@@ -28,6 +25,9 @@ struct Teacher
     void modifyStudentGrade(const string &courseName, int studentID, double newGrade, vector<Student> &students) const;
 
     void displayInfo() const;
+
+    json toJSON() const;
+    static Teacher fromJSON(const json &j);
 };
 
 // ————————————–––––––––––––––----------------------------------------

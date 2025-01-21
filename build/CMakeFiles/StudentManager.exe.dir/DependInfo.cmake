@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/AmirHossein/Documents/Programming/Student Manager/src/Manager.cpp" "CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o.d"
   "/Users/AmirHossein/Documents/Programming/Student Manager/src/Menu.cpp" "CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o.d"
   "/Users/AmirHossein/Documents/Programming/Student Manager/src/Student.cpp" "CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o.d"
+  "/Users/AmirHossein/Documents/Programming/Student Manager/src/Teacher.cpp" "CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o.d"
   "/Users/AmirHossein/Documents/Programming/Student Manager/src/Utils.cpp" "CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o.d"
   "/Users/AmirHossein/Documents/Programming/Student Manager/src/main.cpp" "CMakeFiles/StudentManager.exe.dir/src/main.cpp.o" "gcc" "CMakeFiles/StudentManager.exe.dir/src/main.cpp.o.d"
   )

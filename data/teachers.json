@@ -1,1 +1,16 @@
-null
+[
+  {
+    "courses": [],
+    "firstName": "Kazem",
+    "id": "1",
+    "lastName": "Fouladi",
+    "password": ""
+  },
+  {
+    "courses": [],
+    "firstName": "Amir Hossein",
+    "id": "2",
+    "lastName": "Keihani Pour",
+    "password": ""
+  }
+]
