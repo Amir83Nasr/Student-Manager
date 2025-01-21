@@ -30,9 +30,9 @@ public:
     // ——————————–––––––––––---------------------
 
     void manageStudents();
-    
-    void filterStudents();
+
     void showStudentDetails();
+    void filterStudents();
 
     void addStudent();
     void editStudent();
@@ -45,7 +45,7 @@ public:
 
     void manageTeachers();
 
-    void listTeachers();
+    void showTeacherDetails();
 
     void addTeacher();
     void editTeacher();

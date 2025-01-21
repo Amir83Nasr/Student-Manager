@@ -10,5 +10,18 @@
     "id": "1",
     "lastName": "Fouladi",
     "password": "1111"
+  },
+  {
+    "birthDay": 2,
+    "birthMonth": 11,
+    "birthYear": 1359,
+    "courses": [
+      "Data Base",
+      "Design Compiler"
+    ],
+    "firstName": "Amir Hossein",
+    "id": "2",
+    "lastName": "Keihani Pour",
+    "password": "2222"
   }
 ]

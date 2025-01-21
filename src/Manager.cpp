@@ -169,16 +169,27 @@ void Manager::showStudentDetails()
             cout << "║ " << setw(22) << left << "Course Name" << setw(12) << left << "Weight"
                  << setw(12) << left << "Grade" << "                      ║\n";
             cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
-        }
 
-        for (const auto &course : student.courses)
-        {
-            cout << "║ " << setw(24) << left << course.name
-                 << setw(11) << left << course.weight
-                 << setw(12) << left << fixed << setprecision(2) << course.grade << "                     ║\n";
-        }
+            double totalWeight = 0.0, weightedGradeSum = 0.0;
+            int totalCourses = student.courses.size();
 
-        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+            for (const auto &course : student.courses)
+            {
+                cout << "║ " << setw(24) << left << course.name
+                     << setw(11) << left << course.weight
+                     << setw(12) << left << fixed << setprecision(2) << course.grade << "                     ║\n";
+                totalWeight += course.weight;
+                weightedGradeSum += course.grade * course.weight;
+            }
+
+            double averageGrade = (totalWeight > 0) ? (weightedGradeSum / totalWeight) : 0.0;
+
+            cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
+            cout << "║ " << setw(24) << left << "Summary"
+                 << setw(11) << left << totalWeight
+                 << setw(12) << left << fixed << setprecision(2) << averageGrade << "                     ║\n";
+            cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+        }
     }
     else
     {
@@ -871,30 +882,31 @@ void Manager::manageTeachers()
     {
         loadStudentsFromFile();
 
-        // هدر لیست دانش‌آموزان
+        // هدر لیست اساتید
         cout << "╔══════════════════════════════════════════════════════════════════════════════════════════╗\n";
-        cout << "║                                    📝 Teachers List                                      ║\n";
+        cout << "║                                       Teacher List                                       ║\n";
         cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
 
         // ستون‌های جدول
-        cout << "║ " << left << setw(14) << "🔢 ID"
+        cout << "║ " << left << setw(15) << "🔢 ID"
              << setw(25) << "👤 First Name"
              << setw(22) << "👥 Last Name"
-             << setw(12) << "📅 Year"
-             << setw(17) << "📊 Avg Grade"
-             << setw(8) << "Weights" << " ║\n";
+             << setw(21) << "📅 Birth Date"
+             << setw(15) << "📚 Courses" << " ║\n";
 
         cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
 
-        // اطلاعات دانش‌آموزان
-        for (const auto &s : students)
+        // اطلاعات اساتید
+        for (const auto &t : teachers)
         {
-            cout << "║ " << left << setw(13) << s.id
-                 << setw(23) << s.firstName
-                 << setw(20) << s.lastName
-                 << setw(13) << s.entryYear
-                 << setw(15) << fixed << setprecision(2) << s.averageGrade()
-                 << setw(4) << s.totalWeight() << " ║\n";
+            string birthDate = to_string(t.birthYear) + "/" + to_string(t.birthMonth) + "/" + to_string(t.birthDay);
+            int age = calculateAge(t.birthYear);
+
+            cout << "║ " << left << setw(13) << t.id
+                 << setw(23) << t.firstName
+                 << setw(20) << t.lastName
+                 << setw(21) << birthDate
+                 << setw(11) << t.courses.size() << " ║\n";
         }
 
         cout << "╚══════════════════════════════════════════════════════════════════════════════════════════╝\n";
@@ -931,15 +943,15 @@ void Manager::manageTeachers()
             saveTeachersToFileSorted();
             break;
         case 2:
-            editStudent();
+            editTeacher();
             saveTeachersToFileSorted();
             break;
         case 3:
-            deleteStudent();
+            deleteTeacher();
             saveTeachersToFileSorted();
             break;
         case 4:
-            showStudentDetails();
+            showTeacherDetails();
             break;
         case 0:
             cout << "╚═════════════════════════════════════════════ Return to Admin Menu ══╝\n";
@@ -1139,7 +1151,7 @@ void Manager::deleteTeacher()
     waitForKeyPress();
 }
 
-void Manager::listTeachers()
+void Manager::showTeacherDetails()
 {
     waitForKeyPress();
 
