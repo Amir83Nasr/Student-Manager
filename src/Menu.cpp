@@ -122,8 +122,8 @@ void Manager::adminMenu()
     // منوی انتخاب گزینه‌ها
     cout
         << "\n╔══════════════════════════════════════════════════════════ Options ══╗\n";
-    cout << "║ 1️⃣  Manage Students                                                  ║\n";
-    cout << "║ 2️⃣  Manage Teachers                                                  ║\n";
+    cout << "║ 1️⃣  Manage Teachers                                                  ║\n";
+    cout << "║ 2️⃣  Manage Students                                                  ║\n";
     cout << "║ 3️⃣  Export to Excel                                                  ║\n";
     cout << "║ 0️⃣  Logout                                                           ║\n";
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
@@ -137,11 +137,11 @@ void Manager::adminMenu()
     {
     case 1:
       clearConsole();
-      listStudents();
+      manageTeachers();
       break;
     case 2:
       clearConsole();
-      manageTeachers();
+      manageStudents();
       break;
     case 3:
       exportToExcel("../data/students.csv");
@@ -171,7 +171,7 @@ void Manager::adminMenu()
 void Manager::accessMenu()
 {
   loadStudentsFromFile();
-  // loadTeachersFromFile();
+  loadTeachersFromFile();
 
   while (true)
   {
@@ -196,8 +196,7 @@ void Manager::accessMenu()
     switch (choice)
     {
     case 1:
-      clearConsole();
-      adminMenu();
+      adminLogin();
       break;
     case 2:
       clearConsole();
@@ -208,7 +207,7 @@ void Manager::accessMenu()
       break;
     case 0:
       saveStudentsToFileSorted();
-      // saveTeachersToFileSorted();
+      saveTeachersToFileSorted();
 
       cout << "╚═════════════════════════════════════════════════════════ Goodbye! ══╝\n";
       waitForKeyPress();

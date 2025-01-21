@@ -59,4 +59,38 @@ bool caseInsensitiveCompare(const std::string &str1, const std::string &str2)
                       { return std::tolower(c1) == std::tolower(c2); });
 }
 
+// ——————————–––––––––––---------------------
+
+int calculateAge(int birthYear)
+{
+    time_t t = time(nullptr);
+    tm *currentTime = localtime(&t);
+
+    int currentYear = currentTime->tm_year + 1900; // سال میلادی فعلی
+    int shamsiYear = currentYear - 621;            // تبدیل به شمسی
+    return shamsiYear - birthYear;
+}
+
+// ——————————–––––––––––---------------------
+
+// void drawLine(char symbol = '═', int width = 70)
+// {
+//     cout << "╔" << string(width, symbol) << "╗\n";
+// }
+
+// ——————————–––––––––––---------------------
+
+bool isValidDate(int year, int month, int day)
+{
+    if (year < 1300 || year > 1400)
+        return false;
+    if (month < 1 || month > 12)
+        return false;
+    if (day < 1 || day > 31)
+        return false;
+
+    const int daysInMonth[] = {31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29};
+    return day <= daysInMonth[month - 1];
+}
+
 // ————————————–––––––––––––––----------------------------------------

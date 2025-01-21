@@ -1,16 +1,14 @@
 [
   {
-    "courses": [],
+    "birthDay": 16,
+    "birthMonth": 10,
+    "birthYear": 1351,
+    "courses": [
+      "AI"
+    ],
     "firstName": "Kazem",
     "id": "1",
     "lastName": "Fouladi",
-    "password": ""
-  },
-  {
-    "courses": [],
-    "firstName": "Amir Hossein",
-    "id": "2",
-    "lastName": "Keihani Pour",
-    "password": ""
+    "password": "1111"
   }
 ]

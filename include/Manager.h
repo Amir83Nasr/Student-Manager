@@ -27,7 +27,10 @@ private:
 public:
     explicit Manager(const string &teacherFile, const string &studentFile, const string &courseFile);
 
-    void listStudents();
+    // ——————————–––––––––––---------------------
+
+    void manageStudents();
+    
     void filterStudents();
     void showStudentDetails();
 
@@ -35,28 +38,34 @@ public:
     void editStudent();
     void deleteStudent();
 
+    void saveStudentsToFileSorted() const;
+    void loadStudentsFromFile();
+
+    // ——————————–––––––––––---------------------
+
     void manageTeachers();
+
     void listTeachers();
 
     void addTeacher();
     void editTeacher();
     void deleteTeacher();
 
-    void saveStudentsToFileSorted() const;
-    void loadStudentsFromFile();
-
     void saveTeachersToFileSorted() const;
     void loadTeachersFromFile();
+
+    // ——————————–––––––––––---------------------
 
     void loadCoursesFromFileSorted() const;
     void saveCoursesToFile();
 
-    void exportToExcel(const string &outputFilename) const;
+    // ——————————–––––––––––---------------------
 
     void adminLogin();
     void teacherLogin();
     void studentLogin();
 
+    void exportToExcel(const string &outputFilename) const;
     void run();
 };
 

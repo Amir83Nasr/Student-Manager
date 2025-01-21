@@ -11,6 +11,7 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
+#include <thread>
 
 #include "../external/nlohmann_json/include/nlohmann/json.hpp"
 
@@ -21,9 +22,14 @@ using json = nlohmann::json;
 
 void clearConsole();
 void waitForKeyPress();
+// void drawLine(char symbol = '═', int width = 70);
+
 int getValidatedInt(const string &prompt, int min = INT_MIN, int max = INT_MAX);
+bool caseInsensitiveCompare(const string &str1, const string &str2);
+
 int currentYear();
-bool caseInsensitiveCompare(const std::string &str1, const std::string &str2);
+int calculateAge(int birthYear);
+bool isValidDate(int year, int month, int day);
 
 // ————————————–––––––––––––––----------------------------------------
 

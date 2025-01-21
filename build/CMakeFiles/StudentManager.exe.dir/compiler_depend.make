@@ -229,6 +229,7 @@ CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: /Users/AmirHossein/Documents
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -253,6 +254,7 @@ CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: /Users/AmirHossein/Documents
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -323,6 +325,7 @@ CMakeFiles/StudentManager.exe.dir/src/Course.cpp.o: /Users/AmirHossein/Documents
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -583,6 +586,7 @@ CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -607,6 +611,7 @@ CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -677,6 +682,7 @@ CMakeFiles/StudentManager.exe.dir/src/Manager.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -937,6 +943,7 @@ CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -961,6 +968,7 @@ CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -1031,6 +1039,7 @@ CMakeFiles/StudentManager.exe.dir/src/Menu.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -1289,6 +1298,7 @@ CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -1313,6 +1323,7 @@ CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -1383,6 +1394,7 @@ CMakeFiles/StudentManager.exe.dir/src/Student.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -1642,6 +1654,7 @@ CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -1666,6 +1679,7 @@ CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -1736,6 +1750,7 @@ CMakeFiles/StudentManager.exe.dir/src/Teacher.cpp.o: /Users/AmirHossein/Document
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -1992,6 +2007,7 @@ CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: /Users/AmirHossein/Documents/
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -2016,6 +2032,7 @@ CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: /Users/AmirHossein/Documents/
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -2086,6 +2103,7 @@ CMakeFiles/StudentManager.exe.dir/src/Utils.cpp.o: /Users/AmirHossein/Documents/
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -2346,6 +2364,7 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_function.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algo.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
@@ -2370,6 +2389,7 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unordered_map.h \
@@ -2440,6 +2460,7 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/ell_integral.tcc \
@@ -2495,6 +2516,8 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/beta_function.tcc:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/bessel_function.tcc:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string:
 
@@ -2657,6 +2680,8 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cerrno:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/memoryfwd.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/memory_resource.h:
 
@@ -3077,6 +3102,8 @@ CMakeFiles/StudentManager.exe.dir/src/main.cpp.o: /Users/AmirHossein/Documents/P
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_types/_wctrans_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/functional:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 

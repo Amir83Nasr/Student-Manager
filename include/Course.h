@@ -2,8 +2,6 @@
 #define COURSE_H
 
 #include "Utils.h"
-#include <vector>
-#include <fstream>
 
 // ———————————–––––––––––––––(Classes)-------------------------------
 
@@ -19,5 +17,7 @@ struct Course
   json toJSON() const;
   static Course fromJSON(const json &j);
 };
+
+// ————————————–––––––––––––––----------------------------------------
 
 #endif // COURSE_H
