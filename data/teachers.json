@@ -25,6 +25,18 @@
     "password": "2222"
   },
   {
+    "birthDay": 1,
+    "birthMonth": 1,
+    "birthYear": 1360,
+    "courses": [
+      "CAD"
+    ],
+    "firstName": "Mahdi",
+    "id": "3",
+    "lastName": "Seyfi Pour",
+    "password": "3333"
+  },
+  {
     "birthDay": 20,
     "birthMonth": 1,
     "birthYear": 1365,

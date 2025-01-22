@@ -26,5 +26,12 @@
     "instructor": "Razieh Ghiasi",
     "name": "AP",
     "weight": 3
+  },
+  {
+    "grade": 0.0,
+    "id": "4",
+    "instructor": "Amir Hossein Keihani Pour",
+    "name": "Operating System",
+    "weight": 3
   }
 ]
