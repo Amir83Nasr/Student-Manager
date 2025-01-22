@@ -1,0 +1,69 @@
+# Build directories
+/build/
+/out/
+/bin/
+/obj/
+/Debug/
+/Release/
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled object files
+*.o
+*.lo
+*.la
+*.al
+*.obj
+*.gch
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# Static and dynamic libraries
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Editor and IDE specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS resource fork
+_*
+*.Spotlight-V100
+.Trashes
+*.VolumeIcon.icns
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# JSON data files (if generated dynamically)
+*.json
+
+# Ignore test outputs
+/tests/output/
+
+# Additional user-defined files
+/custom_temp/
