@@ -8,7 +8,7 @@
 
 struct Student
 {
-  int id;
+  string id;
   string firstName;
   string lastName;
   int entryYear;

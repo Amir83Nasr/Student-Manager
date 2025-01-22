@@ -23,5 +23,18 @@
     "id": "2",
     "lastName": "Keihani Pour",
     "password": "2222"
+  },
+  {
+    "birthDay": 20,
+    "birthMonth": 1,
+    "birthYear": 1365,
+    "courses": [
+      "FCP",
+      "AP"
+    ],
+    "firstName": "Razieh",
+    "id": "4",
+    "lastName": "Ghiasi",
+    "password": "4444"
   }
 ]

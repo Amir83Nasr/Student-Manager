@@ -1,38 +1,16 @@
 [
   {
-    "courses": [
-      {
-        "code": "",
-        "grade": 20.0,
-        "instructor": "",
-        "name": "AI",
-        "weight": 3
-      },
-      {
-        "code": "",
-        "grade": 12.0,
-        "instructor": "",
-        "name": "Amar",
-        "weight": 2
-      },
-      {
-        "code": "",
-        "grade": 20.0,
-        "instructor": "",
-        "name": "FCP",
-        "weight": 3
-      }
-    ],
+    "courses": [],
     "entryYear": 1401,
     "firstName": "Amir Hossein",
-    "id": 220701104,
+    "id": "220701104",
     "lastName": "Nasrollahi"
   },
   {
     "courses": [],
     "entryYear": 1401,
     "firstName": "Mohammad Mahdi",
-    "id": 220701105,
+    "id": "220701105",
     "lastName": "Nasrollahi"
   }
 ]

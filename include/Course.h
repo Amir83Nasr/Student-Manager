@@ -7,12 +7,12 @@
 
 struct Course
 {
-  string code;       // کد درس
+  string id;       // کد درس
   string name;       // نام درس
   string instructor; // استاد درس
 
-  double grade; // نمره
-  int weight;   // وزن درس (معادل تعداد واحد)
+  double grade = 0.0; // نمره
+  int weight;         // وزن درس (معادل تعداد واحد)
 
   json toJSON() const;
   static Course fromJSON(const json &j);

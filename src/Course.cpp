@@ -5,7 +5,7 @@
 json Course::toJSON() const
 {
     return {
-        {"code", code},
+        {"id", id},
         {"name", name},
         {"instructor", instructor},
         {"weight", weight},
@@ -18,7 +18,7 @@ Course Course::fromJSON(const json &j)
 {
     Course cource;
 
-    cource.code = j.at("code").get<string>();
+    cource.id = j.at("id").get<string>();
     cource.name = j.at("name").get<string>();
     cource.instructor = j.at("instructor").get<string>();
     cource.weight = j.at("weight").get<int>();

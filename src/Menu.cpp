@@ -124,7 +124,8 @@ void Manager::adminMenu()
         << "\n╔══════════════════════════════════════════════════════════ Options ══╗\n";
     cout << "║ 1️⃣  Manage Teachers                                                  ║\n";
     cout << "║ 2️⃣  Manage Students                                                  ║\n";
-    cout << "║ 3️⃣  Export to Excel                                                  ║\n";
+    cout << "║ 3️⃣  Manage Cources                                                   ║\n";
+    cout << "║ 4️⃣  Export to Excel                                                  ║\n";
     cout << "║ 0️⃣  Logout                                                           ║\n";
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
 
@@ -144,6 +145,10 @@ void Manager::adminMenu()
       manageStudents();
       break;
     case 3:
+      clearConsole();
+      manageCourses();
+      break;
+    case 4:
       exportToExcel("../data/students.csv");
       waitForKeyPress();
       break;

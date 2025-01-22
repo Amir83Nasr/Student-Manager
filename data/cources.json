@@ -1,1 +1,30 @@
-null
+[
+  {
+    "grade": 0.0,
+    "id": "0",
+    "instructor": "Razieh Ghiasi",
+    "name": "FCP",
+    "weight": 3
+  },
+  {
+    "grade": 0.0,
+    "id": "1",
+    "instructor": "Kazem Fouladi Ghaleh",
+    "name": "AI",
+    "weight": 3
+  },
+  {
+    "grade": 0.0,
+    "id": "2",
+    "instructor": "Razieh Ghiasi",
+    "name": "Algorithm",
+    "weight": 3
+  },
+  {
+    "grade": 0.0,
+    "id": "3",
+    "instructor": "Razieh Ghiasi",
+    "name": "AP",
+    "weight": 3
+  }
+]

@@ -24,7 +24,7 @@ json Student::toJSON() const
 Student Student::fromJSON(const json &j)
 {
     Student s = {
-        j.at("id").get<int>(),
+        j.at("id").get<string>(),
         j.at("firstName").get<string>(),
         j.at("lastName").get<string>(),
         j.at("entryYear").get<int>(),

@@ -56,8 +56,14 @@ public:
 
     // ——————————–––––––––––---------------------
 
-    void loadCoursesFromFileSorted() const;
-    void saveCoursesToFile();
+    void manageCourses();
+
+    void addCourse();
+    void editCourse();
+    void deleteCourse();
+
+    void saveCoursesToFileSorted() const;
+    void loadCoursesFromFile();
 
     // ——————————–––––––––––---------------------
 
