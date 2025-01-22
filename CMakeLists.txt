@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # نام پروژه
-project(StudentManager)
+project(UniversityManagementSystem)
 
 # تنظیم استاندارد زبان C++
 set(CMAKE_CXX_STANDARD 17)
@@ -31,7 +31,7 @@ set(HEADERS
 include_directories(${CMAKE_SOURCE_DIR}/external/nlohmann_json/include)
 
 # ایجاد فایل اجرایی
-add_executable(StudentManager.exe ${SOURCES})
+add_executable(UniversityManagementSystem.exe ${SOURCES})
 
 # افزودن مسیر هدرها
-target_include_directories(StudentManager.exe PRIVATE include)
+target_include_directories(UniversityManagementSystem.exe PRIVATE include)

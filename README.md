@@ -34,7 +34,7 @@ Welcome to the **University Management System** project! This is a robust C++ ap
 
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/your-repo/university-management-system.git
+   git clone https://github.com/Amir83Nasr/university-management-system.git
    cd university-management-system
    ```
 
