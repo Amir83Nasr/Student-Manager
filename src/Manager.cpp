@@ -1084,43 +1084,127 @@ void Manager::addTeacher()
 
 void Manager::editTeacher()
 {
-    clearConsole();
-    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
-    cout << "║                           ✏️ Edit Teacher                           ║\n";
+    cout << "\n\n╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                             Edit Teacher                            ║\n";
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
 
-    cout << "Enter Teacher ID to edit: ";
-    string id;
-    cin >> id;
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║ Enter Teacher ID to Edit: ";
 
-    // پیدا کردن استاد با ID مشخص‌شده
+    string id;
+    // بررسی ورودی معتبر
+    while (!(cin >> id))
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "║ ❌ Invalid input. Enter a valid integer for Student ID: ";
+    }
+
+    // پیدا کردن دانش‌آموز
     auto it = find_if(teachers.begin(), teachers.end(), [id](const Teacher &t)
                       { return t.id == id; });
 
     if (it != teachers.end())
     {
-        Teacher &t = *it;
+        clearConsole();
+        Teacher &teacher = *it;
+
+        string birthDate = to_string(teacher.birthYear) + "/" + to_string(teacher.birthMonth) + "/" + to_string(teacher.birthDay);
+        int age = calculateAge(teacher.birthYear);
+
+        cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║                             Edit Teacher                            ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+        cout << "╔══════════════════════════════════════════════════════ Information ══╗\n";
+        cout << "║ - ID          : " << teacher.id << "                                                \n";
+        cout << "║ - Name        : " << teacher.firstName << " " << teacher.lastName << "                  \n";
+        cout << "║ - Birth Date  : " << birthDate << "                                 \n";
+        cout << "║ - Age         : " << age << "                                       \n";
+        cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
 
         string input;
         cin.ignore();
 
-        cout << "Enter New First Name (current: " << t.firstName << "): ";
+        // ویرایش نام
+        cout << "║ Enter New First Name (current: " << teacher.firstName << "): ";
         getline(cin, input);
         if (!input.empty())
-            t.firstName = input;
+            teacher.firstName = input;
 
-        cout << "Enter New Last Name (current: " << t.lastName << "): ";
+        cout << "║ Enter New Last Name (current: " << teacher.lastName << "): ";
         getline(cin, input);
         if (!input.empty())
-            t.lastName = input;
+            teacher.lastName = input;
 
-        cout << "✅ Teacher updated successfully!\n";
+        // ویرایش سال ورود
+        cout << "║ Enter New Birth Date " << " (current: " << birthDate << "): \n";
+        int birthYear, birthMonth, birthDay;
+        while (true)
+        {
+            cout << "║ Enter Birth Year (e.g., 1365): ";
+            cin >> birthYear;
+            cout << "║ Enter Birth Month (1-12): ";
+            cin >> birthMonth;
+            cout << "║ Enter Birth Day (1-31): ";
+            cin >> birthDay;
+
+            if (isValidDate(birthYear, birthMonth, birthDay))
+            {
+                teacher.birthYear = birthYear;
+                teacher.birthMonth = birthMonth;
+                teacher.birthDay = birthDay;
+                break;
+            }
+            else
+            {
+                cout << "║ ❌ Invalid date. Please enter a valid date in the Persian calendar.║\n";
+            }
+        }
+
+        // ویرایش تعداد دروس
+        cout << "║ Enter Number of Courses (current: " << teacher.courses.size() << "): ";
+        int numCourses;
+        while (true)
+        {
+            if (cin >> numCourses && numCourses >= 0)
+            {
+                teacher.courses.resize(numCourses);
+                break;
+            }
+            else
+            {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "║ ❌ Invalid input. Enter a non-negative integer: ";
+            }
+        }
+
+        cin.ignore(); // پاک کردن بافر برای دریافت نام دروس
+
+        // ویرایش نام دروس
+        for (int i = 0; i < numCourses; ++i)
+        {
+            cout << "║ Enter Name for Course " << i + 1 << " (current: " << teacher.courses[i] << "): ";
+            getline(cin, input);
+            if (!input.empty())
+                teacher.courses[i] = input;
+        }
+
+        // پیام موفقیت
+        cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║ ✅ Teacher updated successfully!                                    ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
     }
     else
     {
-        cout << "❌ No teacher found with ID " << id << "!\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+        cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║ ❌ Operation canceled. The teacher was not found.                   ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
     }
 
+    cout << "═══════════════════════════════════════════════════════════════════════\n";
     waitForKeyPress();
 }
 
@@ -1153,23 +1237,79 @@ void Manager::deleteTeacher()
 
 void Manager::showTeacherDetails()
 {
-    waitForKeyPress();
-
-    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
-    cout << "║                          📋 List of Teachers                       ║\n";
+    cout << "\n\n╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                      View Teacher Informations                      ║\n";
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
 
-    if (teachers.empty())
+    cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║ Enter Teacher ID to View: ";
+
+    string id;
+    while (!(cin >> id))
     {
-        cout << "No teachers found!\n";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "║ ❌ Invalid input. Enter a valid integer for Teacher ID: ";
+    }
+
+    // پیدا کردن دانش‌آموز
+    auto it = find_if(teachers.begin(), teachers.end(), [id](const Teacher &t)
+                      { return t.id == id; });
+
+    if (it != teachers.end())
+    {
+        clearConsole();
+        const Teacher &teacher = *it;
+
+        // هدر
+        cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║                          Teacher Details                            ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+        string birthDate = to_string(teacher.birthYear) + "/" + to_string(teacher.birthMonth) + "/" + to_string(teacher.birthDay);
+        int age = calculateAge(teacher.birthYear);
+
+        // اطلاعات دانش‌آموز
+        cout << "╔══════════════════════════════════════════════════════ Information ══╗\n";
+        cout << "║ ID          : " << teacher.id << "\n";
+        cout << "║ First Name  : " << teacher.firstName << "\n";
+        cout << "║ Last Name   : " << teacher.lastName << "\n";
+        cout << "║ Birth Date  : " << birthDate << "\n";
+        cout << "║ Age         : " << age << "\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+        if (teacher.courses.empty())
+        {
+            cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
+            cout << "║ ⚠️  No courses found for this teacher!                               ║\n";
+        }
+        else
+        {
+            // نمایش اطلاعات درس‌ها
+            cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
+            cout << "║                           Courses Details                           ║\n";
+            cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+            cout << "╔═════════════════════════════════════════════════════════════════════╗\n";
+            cout << "║ " << setw(24) << left << "Course Name" << setw(44) << left << "Weight" << "║\n";
+            cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
+
+            for (const auto &course : teacher.courses)
+            {
+                cout << "║ " << setw(24) << left << course << "\n";
+            }
+        }
+
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
     }
     else
     {
-        for (const auto &t : teachers)
-        {
-            cout << "ID: " << t.id << ", Name: " << t.firstName << " " << t.lastName
-                 << "\n";
-        }
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+        cout << "\n\n╔═════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║ ❌ Operation canceled. The Teacher was not deleted.                 ║\n";
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+        cout << "═══════════════════════════════════════════════════════════════════════\n";
     }
 
     waitForKeyPress();
