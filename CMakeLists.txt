@@ -27,11 +27,17 @@ set(HEADERS
     include/Utils.h
 )
 
-# افزودن کتابخانه nlohmann/json
-include_directories(${CMAKE_SOURCE_DIR}/external/nlohmann_json/include)
+# تنظیم مسیر vcpkg
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+# پیدا کردن کتابخانه nlohmann-json
+find_package(nlohmann_json CONFIG REQUIRED)
 
 # ایجاد فایل اجرایی
-add_executable(UniversityManagementSystem.exe ${SOURCES})
+add_executable(UniversityManagementSystem ${SOURCES})
 
 # افزودن مسیر هدرها
-target_include_directories(UniversityManagementSystem.exe PRIVATE include)
+target_include_directories(UniversityManagementSystem PRIVATE include)
+
+# لینک کردن کتابخانه به پروژه
+target_link_libraries(UniversityManagementSystem PRIVATE nlohmann_json::nlohmann_json)

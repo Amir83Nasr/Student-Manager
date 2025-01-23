@@ -4,7 +4,8 @@
     "birthMonth": 10,
     "birthYear": 1350,
     "courses": [
-      "AI"
+      "1",
+      "2"
     ],
     "firstName": "Kazem",
     "id": "1",
@@ -15,10 +16,7 @@
     "birthDay": 2,
     "birthMonth": 11,
     "birthYear": 1359,
-    "courses": [
-      "Data Base",
-      "Design Compiler"
-    ],
+    "courses": [],
     "firstName": "Amir Hossein",
     "id": "2",
     "lastName": "Keihani Pour",
@@ -28,9 +26,7 @@
     "birthDay": 1,
     "birthMonth": 1,
     "birthYear": 1360,
-    "courses": [
-      "CAD"
-    ],
+    "courses": [],
     "firstName": "Mahdi",
     "id": "3",
     "lastName": "Seyfi Pour",
@@ -40,13 +36,50 @@
     "birthDay": 20,
     "birthMonth": 1,
     "birthYear": 1365,
-    "courses": [
-      "FCP",
-      "AP"
-    ],
+    "courses": [],
     "firstName": "Razieh",
     "id": "4",
     "lastName": "Ghiasi",
     "password": "4444"
+  },
+  {
+    "birthDay": 6,
+    "birthMonth": 6,
+    "birthYear": 1370,
+    "courses": [],
+    "firstName": "Fatameh",
+    "id": "5",
+    "lastName": "Dirbaz",
+    "password": "5555"
+  },
+  {
+    "birthDay": 29,
+    "birthMonth": 12,
+    "birthYear": 1369,
+    "courses": [],
+    "firstName": "Leyla",
+    "id": "6",
+    "lastName": "Mahdavi",
+    "password": "6666"
+  },
+  {
+    "birthDay": 30,
+    "birthMonth": 11,
+    "birthYear": 1365,
+    "courses": [],
+    "firstName": "Mohammad",
+    "id": "7",
+    "lastName": "Amiri",
+    "password": "7777"
+  },
+  {
+    "birthDay": 25,
+    "birthMonth": 4,
+    "birthYear": 1361,
+    "courses": [],
+    "firstName": "Ahmad",
+    "id": "8",
+    "lastName": "Alinejad",
+    "password": "8888"
   }
 ]

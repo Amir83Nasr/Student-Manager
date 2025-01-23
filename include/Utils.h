@@ -12,8 +12,7 @@
 #include <algorithm>
 #include <cctype>
 #include <thread>
-
-#include "../external/nlohmann_json/include/nlohmann/json.hpp"
+#include <nlohmann/json.hpp>
 
 using namespace std;
 using json = nlohmann::json;

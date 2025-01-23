@@ -67,3 +67,4 @@ _*
 
 # Additional user-defined files
 /custom_temp/
+/vcpkg/

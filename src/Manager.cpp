@@ -890,8 +890,8 @@ void Manager::manageTeachers()
         // ستون‌های جدول
         cout << "║ " << left << setw(15) << "🔢 ID"
              << setw(25) << "👤 First Name"
-             << setw(22) << "👥 Last Name"
-             << setw(21) << "📅 Birth Date"
+             << setw(25) << "👥 Last Name"
+             << setw(18) << "📅 Age"
              << setw(15) << "📚 Courses" << " ║\n";
 
         cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
@@ -904,8 +904,8 @@ void Manager::manageTeachers()
 
             cout << "║ " << left << setw(13) << t.id
                  << setw(23) << t.firstName
-                 << setw(20) << t.lastName
-                 << setw(21) << birthDate
+                 << setw(23) << t.lastName
+                 << setw(18) << age
                  << setw(11) << t.courses.size() << " ║\n";
         }
 
@@ -941,14 +941,17 @@ void Manager::manageTeachers()
             clearConsole();
             addTeacher();
             saveTeachersToFileSorted();
+            saveCoursesToFileSorted();
             break;
         case 2:
             editTeacher();
             saveTeachersToFileSorted();
+            saveCoursesToFileSorted();
             break;
         case 3:
             deleteTeacher();
             saveTeachersToFileSorted();
+            saveCoursesToFileSorted();
             break;
         case 4:
             showTeacherDetails();
@@ -1043,30 +1046,64 @@ void Manager::addTeacher()
         }
     }
 
-    // وارد کردن تعداد دروس
-    int courseCount;
-    cout << "║ Enter the number of courses to assign: ";
-    while (!(cin >> courseCount) || courseCount < 0)
-    {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "║ ❌ Invalid input. Enter a non-negative integer: ";
-    }
+    cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
 
-    cin.ignore();
-    for (int i = 0; i < courseCount; ++i)
-    {
-        string courseName;
-        cout << "║ Enter Course Name #" << (i + 1) << ": ";
-        getline(cin, courseName);
-        teacher.courses.push_back(courseName);
-    }
+    // امکان اتصال درس به استاد
+    cout << "║ Do you want to assign courses to this teacher? (y/n): ";
+    char choice;
+    cin >> choice;
 
     cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+
+    if (tolower(choice) == 'y')
+    {
+        loadCoursesFromFile();
+
+        // هدر لیست اساتید
+        cout << "╔══════════════════════════════════════════════════════════════════════════════════════════╗\n";
+        cout << "║                                    Available Courses                                     ║\n";
+        cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
+
+        // ستون‌های جدول
+        cout << "║ " << left << setw(15) << "🔢 NO."
+             << setw(27) << "👤 Course Name"
+             << setw(20) << "📚 Weight"
+             << setw(34) << "👥 Instructor" << " ║\n";
+
+        cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
+
+        // اطلاعات اساتید
+        for (size_t i = 0; i < courses.size(); ++i)
+        {
+            cout << "║ " << left << setw(13) << i + 1
+                 << setw(30) << courses[i].name
+                 << setw(15) << courses[i].weight
+                 << setw(30) << courses[i].instructor << " ║\n";
+        }
+
+        cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
+
+        int courseChoice;
+        do
+        {
+            cout << "║ Select a course to assign (0 to finish): ";
+            cin >> courseChoice;
+
+            if (courseChoice > 0 && courseChoice <= courses.size())
+            {
+                Course &selectedCourse = courses[courseChoice - 1];
+                selectedCourse.instructor = teacher.firstName + ' ' + teacher.lastName;
+                teacher.courses.push_back(selectedCourse.id);
+            }
+
+        } while (courseChoice != 0);
+
+        cout << "╚═════════════════════════════════════════════════════════════════════╝\n";
+    }
+
     teachers.push_back(teacher);
 
-    const int currentYear = 1402;
-    int age = currentYear - teacher.birthYear;
+    int age = currentYear() - teacher.birthYear;
 
     cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
     cout << "║ ✅ Teacher added successfully!                                      ║\n";
@@ -1284,6 +1321,7 @@ void Manager::showTeacherDetails()
         }
         else
         {
+            loadCoursesFromFile();
             // نمایش اطلاعات درس‌ها
             cout << "\n╔═════════════════════════════════════════════════════════════════════╗\n";
             cout << "║                           Courses Details                           ║\n";
@@ -1293,9 +1331,15 @@ void Manager::showTeacherDetails()
             cout << "║ " << setw(24) << left << "Course Name" << setw(44) << left << "Weight" << "║\n";
             cout << "╠═════════════════════════════════════════════════════════════════════╣\n";
 
-            for (const auto &course : teacher.courses)
+            for (const auto &courseId : teacher.courses)
             {
-                cout << "║ " << setw(24) << left << course << "\n";
+                for (const auto &course : courses)
+                {
+                    if (courseId == course.id)
+                    {
+                        cout << "║ " << setw(24) << left << course.name << setw(44) << left << course.weight << "\n";
+                    }
+                }
             }
         }
 
@@ -1465,14 +1509,17 @@ void Manager::manageCourses()
             clearConsole();
             addCourse();
             saveCoursesToFileSorted();
+            saveTeachersToFileSorted();
             break;
         case 2:
             editCourse();
             saveCoursesToFileSorted();
+            saveTeachersToFileSorted();
             break;
         case 3:
             deleteCourse();
             saveCoursesToFileSorted();
+            saveTeachersToFileSorted();
             break;
         case 0:
             cout << "╚═════════════════════════════════════════════ Return to Admin Menu ══╝\n";
@@ -1610,8 +1657,8 @@ void Manager::addCourse()
     // ستون‌های جدول
     cout << "║ " << left << setw(15) << "🔢 NO."
          << setw(25) << "👤 First Name"
-         << setw(22) << "👥 Last Name"
-         << setw(21) << "📅 Age"
+         << setw(26) << "👥 Last Name"
+         << setw(17) << "📅 Age"
          << setw(15) << "📚 Courses" << " ║\n";
 
     cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
@@ -1624,8 +1671,8 @@ void Manager::addCourse()
 
         cout << "║ " << left << setw(13) << i + 1
              << setw(23) << teachers[i].firstName
-             << setw(20) << teachers[i].lastName
-             << setw(21) << age
+             << setw(24) << teachers[i].lastName
+             << setw(17) << age
              << setw(11) << teachers[i].courses.size() << " ║\n";
     }
     cout << "╠══════════════════════════════════════════════════════════════════════════════════════════╣\n";
@@ -1643,6 +1690,9 @@ void Manager::addCourse()
     } while (instructorIndex < 1 || instructorIndex > teachers.size());
 
     newCourse.instructor = teachers[instructorIndex - 1].firstName + " " + teachers[instructorIndex - 1].lastName;
+
+    Teacher &selectedTeacher = teachers[instructorIndex - 1];
+    selectedTeacher.courses.push_back(newCourse.id);
 
     cout << "╚══════════════════════════════════════════════════════════════════════════════════════════╝\n";
 

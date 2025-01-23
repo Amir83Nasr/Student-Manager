@@ -7,9 +7,9 @@
 
 struct Course
 {
-  string id;       // کد درس
-  string name;       // نام درس
-  string instructor; // استاد درس
+  string id;              // کد درس
+  string name;            // نام درس
+  string instructor = ""; // استاد درس
 
   double grade = 0.0; // نمره
   int weight;         // وزن درس (معادل تعداد واحد)
